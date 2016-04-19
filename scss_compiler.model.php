@@ -90,7 +90,7 @@ class scss_compilerModel extends scss_compiler {
 
         $scss = new Leafo\ScssPhp\Compiler();
         $scss->setFormatter('Leafo\ScssPhp\Formatter\\'.$cfg->formatter);
-        //$scss->setImportPaths("../../common/scss/");
+        $scss->setImportPaths(_XE_PATH_."common/scss/");
 
         FileHandler::makeDir(_XE_PATH_."files/cache/scss");
 
