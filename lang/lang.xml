@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<lang>
+	<item name="scss_compiler_config">
+		<value xml:lang="ko"><![CDATA[SCSS 컴파일러 설정]]></value>
+	</item>
+	<item name="scss_compiler_formatter">
+		<value xml:lang="ko"><![CDATA[SCSS 출력 포맷]]></value>
+	</item>
+    <item name="scss_compiler_activated">
+        <value xml:lang="ko"><![CDATA[사용]]></value>
+    </item>
+    <item name="scss_compiler_disabled">
+        <value xml:lang="ko"><![CDATA[사용안함]]></value>
+    </item>
+    <item name="scss_compiler_example_scss">
+        <value xml:lang="ko"><![CDATA[SCSS 예제]]></value>
+    </item>
+    <item name="scss_compiler_example_scss_output">
+        <value xml:lang="ko"><![CDATA[SCSS 예제 출력]]></value>
+    </item>
+    <item name="scss_compiler_need_to_configuration">
+        <value xml:lang="ko"><![CDATA[SCSS 컴파일러를 사용하기위해서는 몇가지 설정이 필요합니다.]]></value>
+    </item>
+    <item name="scss_compiler_how_to_configuration">
+        <value xml:lang="ko"><![CDATA[XE가 설치된 최상단 디렉토리에서 '.htaccess' 파일의 '# static files'의 (원본 12번째 줄) 이전 상단에 아래 코드를 삽입하셔야합니다.]]></value>
+    </item>
+</lang>

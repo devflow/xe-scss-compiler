@@ -1,0 +1,50 @@
+<load target="js/script.js" />
+
+<section class="section">
+    <h1>{$lang->scss_compiler_config}</h1>
+
+    <div class="message error" cond="!$is_configured">
+        <p>{$lang->scss_compiler_need_to_configuration}</p>
+        <p>{$lang->scss_compiler_how_to_configuration}</p>
+        <textarea rows="3" style="width: 100%;" readonly>{htmlspecialchars($htaccess_code)}</textarea>
+    </div>
+
+    <form ruleset="insertScss_compilerConfig" action="./" method="post" class="x_form-horizontal">
+        <input type="hidden" name="module" value="scss_compiler" />
+        <input type="hidden" name="act" value="procScss_compilerAdminInsertConfig" />
+        <input type="hidden" name="success_return_url" value="{getUrl('act','dispScss_compilerAdminConfig', 'module','admin')}" />
+
+        <div class="x_control-group">
+            <label for="scss_disabled" class="x_control-label">{$lang->scss_compiler_activated}</label>
+            <div class="x_controls">
+                <select name="disabled" id="scss_disabled">
+                    <option value="N" selected="selected"|cond="$cfg->disabled=='Y'">{$lang->scss_compiler_activated}</option>
+                    <option value="Y" selected="selected"|cond="$cfg->disabled=='Y'">{$lang->scss_compiler_disabled}</option>
+                </select>
+            </div>
+        </div>
+
+        {@
+        if(!in_array($cfg->formatter, $formatters)) $cfg->formatter = "Compressed";
+        }
+
+        <div class="x_control-group">
+            <label for="formatter" class="x_control-label">{$lang->scss_compiler_formatter}</label>
+            <div class="x_controls">
+                <select name="formatter" id="formatter">
+                    <option loop="$formatters=>$formatter" value="{$formatter}" selected="selected"|cond="$cfg->formatter == $formatter">{$formatter}</option>
+                </select>
+
+                <p>{$lang->scss_compiler_example_scss}</p>
+                <textarea rows="30" style="display: block;width: 100%" readonly>{htmlspecialchars($test_code)}</textarea>
+
+                <p>{$lang->scss_compiler_example_scss_output}</p>
+                <textarea rows="30" style="display: block;width: 100%" id="test_code_output" readonly></textarea>
+            </div>
+        </div>
+
+        <div class="btnArea">
+            <button type="submit" class="x_btn x_btn-primary">{$lang->cmd_save}</button>
+        </div>
+    </form>
+</section>

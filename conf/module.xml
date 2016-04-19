@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+    <grants />
+    <actions>
+        <action name="dispScss_compilerAdminConfig" type="view" admin_index="true" />
+        <action name="procScss_compilerAdminInsertConfig" type="controller" />
+
+        <action name="compile" type="model" />
+        <action name="compile_test" type="model" />
+    </actions>
+</module>

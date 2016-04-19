@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module version="0.2">
+    <title xml:lang="ko">SCSS 컴파일러</title>
+    <description xml:lang="ko">SCSS를 CSS로 컴파일해주는 모듈입니다.</description>
+    <version>1.0</version>
+    <date>2016-04-18</date>
+    <category>utility</category>
+
+    <author email_address="admin@devflow.kr" link="http://devflow.kr/">
+        <name xml:lang="ko">devflow</name>
+    </author>
+</module>
